@@ -1,0 +1,66 @@
+<resources>
+  <string name="app_name">US Mobile Usage</string>
+
+  <!-- Balance Activity -->
+  <string name="heading_service_ends_date">Service ends %s</string>
+  <string name="service_days_remaining">%d days left</string>
+  <string name="heading_talk">Talk</string>
+  <string name="talk_remaining">%d min left</string>
+  <string name="heading_text">Text</string>
+  <string name="text_remaining">%d text left</string>
+  <string name="heading_data">Data</string>
+  <string name="data_remaining">%d mb left</string>
+  <string name="last_updated_datetime">Last updated %s</string>
+
+  <!-- Login Activity -->
+  <string name="heading_login">Log in to Your\nUS Mobile Account</string>
+  <string name="text_username">Email/Phone Number</string>
+  <string name="text_password">Password</string>
+  <string name="button_log_in">Log In</string>
+  <string name="terms">This application is not affiliated with, authorized, or endorsed by US Mobile.</string>
+  <string name="dialog_title_choose_line">Choose a line</string>
+  <string name="dialog_try_again">Try again</string>
+  <string name="dialog_ok">OK</string>
+  <string name="login_error_no_lines">There are no active lines on your account.</string>
+  <string name="login_error_invalid">Invalid email or phone number and/or password</string>
+  <string name="login_error_server">A server error occurred. Try again later.</string>
+  <string name="login_error_unknown">An unexpected error occurred. Try again later.</string>
+
+  <!-- Widgets -->
+  <string name="widget_talk_left">%d\nmin left</string>
+  <string name="widget_text_left">%d\ntext left</string>
+  <string name="widget_data_left">%d\nmb left</string>
+  <string name="label_unit_talk">min</string>
+  <string name="label_unit_text">text</string>
+  <string name="label_unit_data">mb</string>
+  <string name="last_updated_date">As of %s</string>
+
+  <!-- Settings -->
+  <string name="title_activity_settings">Settings</string>
+  <string name="pref_header_data_sync">Data &amp; sync</string>
+  <string name="pref_title_sync_frequency">Sync frequency</string>
+  <string-array name="pref_sync_frequency_titles">
+    <item>15 minutes</item>
+    <item>30 minutes</item>
+    <item>1 hour</item>
+    <item>3 hours</item>
+    <item>6 hours</item>
+    <item>Never</item>
+  </string-array>
+  <string-array name="pref_sync_frequency_values">
+    <item>15</item>
+    <item>30</item>
+    <item>60</item>
+    <item>180</item>
+    <item>360</item>
+    <item>-1</item>
+  </string-array>
+  <string name="pref_title_wifi_only">Sync only on Wi-Fi</string>
+  <string name="pref_title_system_sync_settings">System sync settings</string>
+
+  <!-- Notifications -->
+  <string name="channel_auth">Authentication Problems</string>
+  <string name="notif_title_auth_error">Authentication Error</string>
+  <string name="notif_content_auth_error">There was a problem logging into your US Mobile account</string>
+
+</resources>

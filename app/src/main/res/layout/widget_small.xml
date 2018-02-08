@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/content"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:paddingTop="4dp"
+  android:paddingBottom="4dp"
+  android:paddingLeft="4dp"
+  android:paddingRight="4dp"
+  android:background="@drawable/widget_background">
+
+  <LinearLayout
+    android:id="@+id/units"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:text="@string/label_unit_talk"
+      android:textAppearance="@style/AppTheme.TextAppearance.Unit"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:text="@string/label_unit_text"
+      android:textAppearance="@style/AppTheme.TextAppearance.Unit"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:text="@string/label_unit_data"
+      android:textAppearance="@style/AppTheme.TextAppearance.Unit"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/values"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/units"
+    android:layout_alignTop="@id/units"
+    android:layout_toLeftOf="@id/units"
+    android:layout_toStartOf="@id/units"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/talk_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:textAlignment="textEnd"
+      android:textAppearance="@style/AppTheme.TextAppearance.Value"
+      tools:text="1000"/>
+
+    <TextView
+      android:id="@+id/text_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:textAppearance="@style/AppTheme.TextAppearance.Value"
+      tools:text="1000"/>
+
+    <TextView
+      android:id="@+id/data_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:textAppearance="@style/AppTheme.TextAppearance.Value"
+      tools:text="1000"/>
+
+  </LinearLayout>
+
+</RelativeLayout>

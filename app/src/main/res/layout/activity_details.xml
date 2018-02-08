@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/swipe_refresh"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.genderquery.usmbalance.ui.BalanceActivity">
+
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@color/primary"
+      android:elevation="4dp"
+      android:theme="@style/AppTheme.AppBarOverlay"
+      app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/service"
+          style="@style/TextAppearance.AppCompat.Large"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          tools:text="@string/heading_service_ends_date"/>
+
+        <ProgressBar
+          android:id="@+id/service_progress"
+          style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:progressDrawable="@drawable/progress_service"
+          android:max="30"
+          android:rotation="180"
+          tools:progress="15"/>
+
+        <TextView
+          android:id="@+id/days"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+          tools:text="@string/service_days_remaining"/>
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="@string/heading_talk"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+        <ProgressBar
+          android:id="@+id/talk_progress"
+          style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:max="100"
+          android:progressDrawable="@drawable/progress_talk"
+          android:rotation="180"
+          tools:progress="75"/>
+
+        <TextView
+          android:id="@+id/talk"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+          tools:text="@string/talk_remaining"/>
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="@string/heading_text"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+        <ProgressBar
+          android:id="@+id/text_progress"
+          style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:max="100"
+          android:progressDrawable="@drawable/progress_text"
+          android:rotation="180"
+          tools:progress="50"/>
+
+        <TextView
+          android:id="@+id/text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+          tools:text="@string/text_remaining"/>
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="@string/heading_data"
+          android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+        <ProgressBar
+          android:id="@+id/data_progress"
+          style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:max="100"
+          android:progressDrawable="@drawable/progress_data"
+          android:rotation="180"
+          tools:progress="25"/>
+
+        <TextView
+          android:id="@+id/data"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+          tools:text="@string/data_remaining"/>
+
+        <TextView
+          android:id="@+id/last_updated"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+          tools:text="@string/last_updated_datetime"/>
+
+      </LinearLayout>
+
+    </ScrollView>
+
+  </LinearLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

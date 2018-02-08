@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/content"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:paddingTop="4dp"
+  android:paddingBottom="4dp"
+  android:paddingLeft="8dp"
+  android:paddingRight="8dp"
+  android:background="@drawable/widget_background">
+
+  <LinearLayout
+    android:id="@+id/units"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:text="@string/label_unit_talk"
+      android:textAppearance="@style/AppTheme.TextAppearance.Unit"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:text="@string/label_unit_text"
+      android:textAppearance="@style/AppTheme.TextAppearance.Unit"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:text="@string/label_unit_data"
+      android:textAppearance="@style/AppTheme.TextAppearance.Unit"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/values"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_alignBottom="@id/units"
+    android:layout_alignTop="@id/units"
+    android:layout_toLeftOf="@id/units"
+    android:layout_toStartOf="@id/units"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/talk_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:textAlignment="textEnd"
+      android:textAppearance="@style/AppTheme.TextAppearance.Value"
+      tools:text="1000"/>
+
+    <TextView
+      android:id="@+id/text_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:textAppearance="@style/AppTheme.TextAppearance.Value"
+      tools:text="1000"/>
+
+    <TextView
+      android:id="@+id/data_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+      android:textAppearance="@style/AppTheme.TextAppearance.Value"
+      tools:text="1000"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/progress_bars"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/values"
+    android:layout_alignParentLeft="true"
+    android:layout_alignTop="@id/values"
+    android:layout_toLeftOf="@id/values"
+    android:orientation="vertical"
+    android:layout_alignParentStart="true"
+    android:layout_toStartOf="@id/values">
+
+    <ProgressBar
+      android:id="@+id/talk_progress"
+      style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginTop="4dp"
+      android:layout_marginBottom="4dp"
+      android:progress="50"
+      android:progressDrawable="@drawable/progress_talk"
+      android:rotation="180"/>
+
+    <ProgressBar
+      android:id="@+id/text_progress"
+      style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginTop="4dp"
+      android:layout_marginBottom="4dp"
+      android:progress="50"
+      android:progressDrawable="@drawable/progress_text"
+      android:rotation="180"/>
+
+    <ProgressBar
+      android:id="@+id/data_progress"
+      style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginTop="4dp"
+      android:layout_marginBottom="4dp"
+      android:progress="50"
+      android:progressDrawable="@drawable/progress_data"
+      android:rotation="180"/>
+
+  </LinearLayout>
+
+  <TextView
+    android:layout_below="@id/progress_bars"
+    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+    android:id="@+id/last_updated"
+    tools:text="@string/last_updated_date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+</RelativeLayout>
