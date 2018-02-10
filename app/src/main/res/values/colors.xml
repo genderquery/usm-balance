@@ -4,7 +4,7 @@
     <color name="primary_dark">#303F9F</color>
     <color name="accent">#FF4081</color>
     <color name="service_progress">#192332</color>
-    <color name="service_background">#f6f7f8</color>
+    <color name="service_background">#e9ebed</color>
     <color name="talk_progress">#419bf9</color>
     <color name="talk_background">#abd3fc</color>
     <color name="text_progress">#8a59ef</color>
