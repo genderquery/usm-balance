@@ -11,6 +11,7 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.preference.TwoStatePreference;
 import android.support.annotation.Nullable;
+
 import com.github.genderquery.usmbalance.R;
 import com.github.genderquery.usmbalance.data.Preferences;
 import com.github.genderquery.usmbalance.sync.SyncJobService;
@@ -33,7 +34,7 @@ public class SettingsFragment extends PreferenceFragment implements
    * summary will be set. For all other Preferences, the summary will be the string value.
    *
    * @param preference the preference whose summary will be updated
-   * @param newValue the value of the preference
+   * @param newValue   the value of the preference
    * @see ListPreference#setEntries(CharSequence[])
    */
   private static void updateSummary(Preference preference, Object newValue) {
@@ -54,10 +55,10 @@ public class SettingsFragment extends PreferenceFragment implements
    * Recursively update the summary for all of the preferences in preferenceGroup.
    *
    * @param sharedPreferences SharedPreferences instance
-   * @param preferenceGroup usually a PreferenceScreen or PreferenceCategory
+   * @param preferenceGroup   usually a PreferenceScreen or PreferenceCategory
    */
   private static void initializeSummaries(SharedPreferences sharedPreferences,
-      PreferenceGroup preferenceGroup) {
+                                          PreferenceGroup preferenceGroup) {
     int preferenceCount = preferenceGroup.getPreferenceCount();
     for (int i = 0; i < preferenceCount; i++) {
       Preference preference = preferenceGroup.getPreference(i);
@@ -113,6 +114,9 @@ public class SettingsFragment extends PreferenceFragment implements
     }
 
     Preference preference = findPreference(key);
+    if (preference instanceof TwoStatePreference) {
+      return;
+    }
     String value = sharedPreferences.getString(key, "");
     updateSummary(preference, value);
   }
